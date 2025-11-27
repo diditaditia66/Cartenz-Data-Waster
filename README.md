@@ -150,6 +150,11 @@ Untuk menggunakan backend lain (misalnya server internal / staging):
 
 ---
 
+## Link Download Aplikasi
+https://drive.google.com/file/d/1pDFSazNbsqBPI3LgjiH9447RaRhLok13
+
+---
+
 ## 📄 Lisensi
 
 Proyek ini dibuat sebagai **internal tool** Cartenz.  
