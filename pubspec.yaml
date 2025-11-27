@@ -1,0 +1,41 @@
+name: data_waster_app
+description: A simple Flutter app to waste mobile data using parallel download & upload requests.
+publish_to: 'none' # karena ini app pribadi / tidak dipublish ke pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Paket HTTP untuk kirim request ke backend Node.js
+  http: ^1.1.0
+
+  # Ikon iOS-style (opsional, aman kalau ikut template default)
+  cupertino_icons: ^1.0.8
+  flutter_local_notifications: ^19.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/cartenz_logo.png"
+  adaptive_icon_background: "#061826"
+  adaptive_icon_foreground: "assets/icons/cartenz_logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/cartenz_logo.png
+
+  # Kalau nanti mau pakai asset (gambar dsb), bisa aktifkan dan isi ini:
+  # assets:
+  #   - assets/
