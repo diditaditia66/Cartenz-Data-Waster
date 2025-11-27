@@ -84,5 +84,73 @@ Saat **Start Test** dijalankan:
 
 Di sisi app, base URL backend diset melalui konstanta:
 
-```dart
+~~~dart
 static const String baseUrl = 'https://waster.anya-vpn.my.id';
+~~~
+
+Jika backend dipindah, cukup ubah nilai ini dan rebuild aplikasi.
+
+---
+
+## 🧑‍💻 Development Setup
+
+### Prasyarat
+
+- Flutter 3.x (atau yang kompatibel dengan project ini)
+- Android SDK & Android Studio / command line tools
+- Device / emulator Android
+
+### Menjalankan di lokal
+
+~~~bash
+# 1. Install dependencies
+flutter pub get
+
+# 2. Jalankan di device / emulator yang terhubung
+flutter run
+~~~
+
+Jika ada masalah dengan plugin Android (Gradle, desugaring, dll.), pastikan:
+
+- `android/app/build.gradle` sudah mengaktifkan `coreLibraryDesugaring`,
+- Versi `desugar_jdk_libs` minimal `2.1.4`.
+
+---
+
+## ⚙️ Konfigurasi Backend
+
+Secara default app mengarah ke:
+
+~~~text
+https://waster.anya-vpn.my.id
+~~~
+
+Untuk menggunakan backend lain (misalnya server internal / staging):
+
+1. Jalankan server Node.js dengan endpoint `waste-download` dan `waste-upload`.
+2. Update konstanta `baseUrl` di `main.dart`.
+3. Rebuild aplikasi:
+
+   ~~~bash
+   flutter clean
+   flutter pub get
+   flutter run
+   ~~~
+
+---
+
+## 🧪 Catatan Penggunaan
+
+- **Hanya untuk internal** – jangan distribusikan ke user akhir.
+- Gunakan **SIM uji** atau profil VPN khusus lab.
+- Perhatikan:
+  - Nilai `Concurrent connections` yang tinggi,
+  - Mode `infinite` (`data size = 0`),  
+    karena kombinasi ini bisa menghabiskan ratusan MB dalam waktu singkat.
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dibuat sebagai **internal tool** Cartenz.  
+Distribusi dan penggunaan di luar organisasi mengikuti kebijakan internal Cartenz.
