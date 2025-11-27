@@ -151,7 +151,7 @@ Untuk menggunakan backend lain (misalnya server internal / staging):
 ---
 
 ## Link Download Aplikasi
-https://drive.google.com/file/d/1pDFSazNbsqBPI3LgjiH9447RaRhLok13
+https://drive.google.com/file/d/1kAj2tH3m1IMJYDYWzlyxF5QBskUSrfoP
 
 ---
 
